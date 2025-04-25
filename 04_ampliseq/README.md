@@ -79,8 +79,7 @@ The script below takes the `ampliseq` output located insire `$OUTDIR/dada2` and 
 
 ```R
 library("phyloseq")
-library("seqinr")
-library("Biostrings")
+library("tidyverse")
 
 creatPSobj <- function(mdata, asvtab, tax, tree){
   metadata <- read.table(mdata, sep = '\t', header = T, row.names = 1)
