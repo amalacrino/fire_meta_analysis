@@ -72,3 +72,35 @@ mafft --thread $NTHREADS ASV_seqs.fasta > asv_aligned.fasta
 
 FastTree -gtr -nt < asv_aligned.fasta > tree.tre
 ```
+
+## Create a `phyloseq` obsect
+
+The script below takes the `ampliseq` output located insire `$OUTDIR/dada2` and creates a `phyloseq` obsect. It assumes that you are located insire `$OUTDIR/dada2`. The `metadata.txt` files for 16S and ITS are located inside the `metadata` folder in this directory. The script below can be used for both 16S and ITS.
+
+```R
+library("phyloseq")
+library("seqinr")
+library("Biostrings")
+
+creatPSobj <- function(mdata, asvtab, tax, tree){
+  metadata <- read.table(mdata, sep = '\t', header = T, row.names = 1)
+  rownames(metadata) <- gsub('[-]', '.', rownames(metadata))
+  data <- read.table(asvtab, sep = '\t', header = T, row.names = 1)
+  tax <- read.table(tax, sep = '\t', header = T, row.names = 1)[,c(1:7)]
+  ref_tree <- ape::read.tree(tree)
+  ps <- phyloseq(sample_data(metadata),
+                 otu_table(data, taxa_are_rows = T),
+                 tax_table(as.matrix(tax)),
+                 phy_tree(ref_tree))
+  return(ps)
+}
+
+ps <- creatPSobj(mdata = "metadata.txt", #metadata file
+                     asvtab = "ASV_table.tsv", #ASV table
+                     tax = "ASV_tax.user.tsv", #taxnomy table
+                     tree = 'tree.tre') #phylogenetic tree
+
+rm(list=setdiff(ls(), c("ps")))
+
+save.image(file = 'data.rds')
+```
