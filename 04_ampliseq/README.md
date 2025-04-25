@@ -8,7 +8,7 @@ The code below runsr `nf-core/ampliseq` and requires:
 
 `$OUTDIR` is the path to the output directory.
 
-`REFDIR` is the path to the directory where databases for taxonomical assignment are stored (i.e., SILVA and UNITE).
+`$REFDIR` is the path to the directory where databases for taxonomical assignment are stored (i.e., SILVA and UNITE).
 
 ## Run ampliseq for 16S
 
