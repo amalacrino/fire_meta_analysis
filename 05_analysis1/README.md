@@ -99,7 +99,7 @@ sncm.calc <- sapply(list.gm,
                       ps <- filter_taxa(ps, function (x) {sum(x > 0) > 1}, prune=TRUE)
                       otut <- t(as.data.frame(otu_table(ps)@.Data))
                       spp.out <- spec.gen(otut, niche.width.method = "levins", perm.method = "quasiswap",
-                                          n = 10, probs = c(0.025, 0.975))
+                                          n = 999, probs = c(0.025, 0.975))
                       spp.out <- tibble::rownames_to_column(spp.out, "ASV")
                       spp.out$group <- paste0(x)
                       print(paste0("-------------- BIOPROJECT ", x, " COMPLETED at ", Sys.time()))
