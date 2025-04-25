@@ -58,3 +58,54 @@ do
     done
 done
 ```
+
+## Cutadapt
+
+The code below removes the specific primers used to generate each individual library.
+
+`$PRJDIR` is the path to the project directory.
+
+`$LISTACC` is either `02_16S.txt` or `03_ITS.txt`.
+
+`$DATA_DIR` is the input directory (where the data has been downloaded). For the example above it is `$PRJDIR/00_16S_data`
+
+`$OUTPUT_DIR` is the directory where you'd like the cleaned data to be stored.
+
+```bash
+
+# Read the file and process each line
+tail -n +2 "$LISTACC" | awk -F'\t' '{print $1, $2, $5, $6}' | sort -u | while read -r BioProject Run FW_seq REV_seq;
+do
+    # Skip empty lines or missing data
+    if [[ -z "$BioProject" || -z "$Run" || -z "$FW_seq" || -z "$REV_seq" ]]; then
+        continue
+    fi
+
+    # Define project and sample directories
+    PROJECT_DIR="$OUTPUT_DIR/$BioProject"
+    mkdir -p "$PROJECT_DIR"
+    
+    # Define input and output files
+    INPUT_FWD="$DATA_DIR/$BioProject/${Run}_1.fastq.gz"
+    INPUT_REV="$DATA_DIR/$BioProject/${Run}_2.fastq.gz"
+    OUTPUT_FWD="$PROJECT_DIR/${Run}_1.fastq"
+    OUTPUT_REV="$PROJECT_DIR/${Run}_2.fastq"
+    
+    # Check if input files exist before processing
+    if [[ -f "$INPUT_FWD" && -f "$INPUT_REV" ]]; then
+        echo "Processing $Run in $PROJECT_DIR"
+        
+        # Run cutadapt in parallel for forward and reverse reads
+        cutadapt -j 64 -g "$FW_seq" -G "$REV_seq" \
+            -o "$OUTPUT_FWD" -p "$OUTPUT_REV" "$INPUT_FWD" "$INPUT_REV"
+    else
+        echo "Warning: Paired files for $Run not found in $DATA_DIR/$BioProject"
+    fi
+done
+
+echo "Primer trimming complete!"
+
+cd $OUTPUT_DIR
+gzip -r ./
+
+```
