@@ -73,7 +73,7 @@ mafft --thread $NTHREADS ASV_seqs.fasta > asv_aligned.fasta
 FastTree -gtr -nt < asv_aligned.fasta > tree.tre
 ```
 
-## Create a `phyloseq` obsect
+## Create a `phyloseq` object
 
 The script below takes the `ampliseq` output located insire `$OUTDIR/dada2` and creates a `phyloseq` obsect. It assumes that you are located insire `$OUTDIR/dada2`. The `metadata.txt` files for 16S and ITS are located inside the `metadata` folder in this directory. The script below can be used for both 16S and ITS.
 
