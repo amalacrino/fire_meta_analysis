@@ -1,0 +1,20 @@
+title	DOI	loci	16S_fw	16S_rev	ITS_fw	ITS_rev	country	SRA_acc_Number
+Key microorganisms defining the microbial communities of an alpine legume-shrubland ecosystem on a volcanic island in natural and fire-affected soils	10.1007/s11104-023-06465-x	16S & ITS	341f	805r	fITS7	ITS4	Spain	PRJNA914530
+Short-term response of the soil bacterial community to differing wildfire severity in Pinus tabulaeformis stands	10.1038/s41598-019-38541-7	16S	338f	806r			China	PRJNA486259
+Soil bacterial and fungal response to wildfires in the Canadian boreal forest across a burn severity gradient	10.1016/j.soilbio.2019.107571	16S & ITS	515f	806r	5.8S	ITS4-fun	Canada	PRJNA564811
+Experimentally determined traits shape bacterial community composition one and five years following wildfire	10.1038/s41559-023-02135-4	16S	515f	806r			Canada	PRJNA825513
+Watershed and fire severity are stronger determinants of soil chemistry and microbiomes than within-watershed woody encroachment in a tallgrass prairie system	10.1093/femsec/fiab154	16S & ITS	515f	806r	fITS7	ITS4	United States	PRJNA718337
+Prescribed versus wildfire impacts on exotic plants and soil microbes in California grasslands	10.1016/j.apsoil.2022.104795	16S & ITS	515f	806r	5.8s	ITS4-fun	United States	PRJNA761493
+Rapid bacterial and fungal successional dynamics in first year after chaparral wildfire	10.1111/mec.16835	16S	515f	806r			United States	PRJNA761539
+Context dependent fungal and bacterial soil community shifts in response to recent wildfires in the Southern Appalachian Mountains	10.1016/j.foreco.2019.117520	16S & ITS	515f	806r	fITS7	ITS4	United States	PRJNA546006
+Mega-fire in redwood tanoak forest reduces bacterial and fungal richness and selects for pyrophilous taxa that are phylogenetically conserved	10.1111/mec.16399	16S	515f	806r			United States	PRJNA659056
+Surface charring from prescribed burning has minimal effects on soil bacterial community composition two weeks post-fire in jack pine barrens	10.1016/j.apsoil.2019.07.004	16S	515f	806r			United States	PRJNA556207
+How do soil microbial communities respond to fire in the intermediate term? Investigating direct and indirect effects associated with fire occurrence and burn severity	10.1016/j.scitotenv.2020.140957	16S	515f	806r			United States	PRJNA632607
+Copiotrophic Bacterial Traits Increase With Burn Severity One Year After a Wildfire	10.3389/ffgc.2022.873527	16S	515f	806r			United States	PRJNA816726
+Wildfire-dependent changes in soil microbiome diversity and function	10.1038/s41564-022-01203-y	16S	515f	806r			United States	PRJNA682830
+Distinct fungal and bacterial responses to fire severity and soil depth across a ten-year wildfire chronosequence in beetle-killed lodgepole pine forests	10.1016/j.foreco.2023.121160	16S & ITS	515f	806r	5.8S	ITS4-fun	United States	PRJNA922564
+Elevated methane flux in a tropical peatland post-fire is linked to depth-dependent changes in peat microbiome assembly	10.1038/s41522-024-00478-9	16S	515f	926r			Brunei	PRJNA772087 
+The temporal and spatial response of soil fungal community composition and potential function to wildfire in a permafrost region in Canada	10.1111/1365-2435.14194	ITS			gITS7	ITS4	Canada	PRJNA780219
+Land management drives dynamic changes to microbial function through edaphic factors and soil biota	10.1016/j.pedobi.2022.150859	ITS			fITS7	ITS4	United States	PRJNA906953
+Temporal dynamics of soil fungi in a pyrodiverse dry_sclerophyll forest	10.1111/mec.17036	ITS			fITS7	ITS4	Australia	PRJNA926791
+Fire-excluded and frequently burned longleaf pine forests have contrasting soil microbial communities	10.1016/j.foreco.2023.121519	16S & ITS	515f	806r	fITS7	ITS4	United States	PRJNA847592; PRJNA847616
