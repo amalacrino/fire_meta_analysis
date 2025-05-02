@@ -1,6 +1,6 @@
-# Title
+# Fire limits soil microbial dispersal and differentially impacts bacterial and fungal communities
 
-**Author list**
+**Jacob R. Hopkins, Giuseppina Vizzari, Alison E. Bennett, Antonino Malacrinò**
 
 ## Abstract
 
