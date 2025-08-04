@@ -2,7 +2,9 @@
 
 **Jacob R. Hopkins, Giuseppina Vizzari, Alison E. Bennett, Antonino Malacrinò**
 
-Preprint available in bioRxiv: [10.1101/2025.05.02.651892](https://doi.org/10.1101/2025.05.02.651892)
+Published in *Global Change Biology*: [10.1111/gcb.70386](https://doi.org/10.1111/gcb.70386)
+
+Preprint: [10.1101/2025.05.02.651892](https://doi.org/10.1101/2025.05.02.651892)
 
 ## Abstract
 
